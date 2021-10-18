@@ -1,0 +1,85 @@
+﻿@page
+@model BuildForConnorT.Pages.newitem.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ItemModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ItemModel.ID" />
+            <div class="form-group">
+                <label asp-for="ItemModel.Customer" class="control-label"></label>
+                <input asp-for="ItemModel.Customer" class="form-control" />
+                <span asp-validation-for="ItemModel.Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.PartNumber" class="control-label"></label>
+                <input asp-for="ItemModel.PartNumber" class="form-control" />
+                <span asp-validation-for="ItemModel.PartNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Quantity" class="control-label"></label>
+                <input asp-for="ItemModel.Quantity" class="form-control" />
+                <span asp-validation-for="ItemModel.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.ConType" class="control-label"></label>
+                <input asp-for="ItemModel.ConType" class="form-control" />
+                <span asp-validation-for="ItemModel.ConType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Cat" class="control-label"></label>
+                <input asp-for="ItemModel.Cat" class="form-control" />
+                <span asp-validation-for="ItemModel.Cat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Con" class="control-label"></label>
+                <input asp-for="ItemModel.Con" class="form-control" />
+                <span asp-validation-for="ItemModel.Con" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.BatchNumber" class="control-label"></label>
+                <input asp-for="ItemModel.BatchNumber" class="form-control" />
+                <span asp-validation-for="ItemModel.BatchNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Reason" class="control-label"></label>
+                <input asp-for="ItemModel.Reason" class="form-control" />
+                <span asp-validation-for="ItemModel.Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Action" class="control-label"></label>
+                <input asp-for="ItemModel.Action" class="form-control" />
+                <span asp-validation-for="ItemModel.Action" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Raised" class="control-label"></label>
+                <input asp-for="ItemModel.Raised" class="form-control" />
+                <span asp-validation-for="ItemModel.Raised" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemModel.Requested" class="control-label"></label>
+                <input asp-for="ItemModel.Requested" class="form-control" />
+                <span asp-validation-for="ItemModel.Requested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

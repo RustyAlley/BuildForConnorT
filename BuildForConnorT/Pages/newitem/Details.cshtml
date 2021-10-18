@@ -1,0 +1,85 @@
+﻿@page
+@model BuildForConnorT.Pages.newitem.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ItemModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Customer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.PartNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.PartNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Quantity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Quantity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.ConType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.ConType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Cat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Cat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Con)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Con)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.BatchNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.BatchNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Reason)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Reason)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Action)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Action)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Raised)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Raised)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemModel.Requested)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemModel.Requested)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ItemModel.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,96 @@
+﻿@page
+@model BuildForConnorT.Pages.newitem.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].PartNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].ConType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Cat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Con)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].BatchNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Raised)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemModel[0].Requested)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ItemModel) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Con)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Raised)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Requested)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
